@@ -1,0 +1,188 @@
+
+.Hero {
+  width: auto;
+  height: auto;
+  position: relative;
+  background-size: cover;
+  min-height: 200px;
+  margin-bottom: 1vw;
+}
+@media only screen and (max-width: 1000px) {
+  .Hero {
+      width: auto;
+      height: auto;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+       min-height: 150px;
+      margin-bottom: 1vw;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+  .Hero {
+      width: auto;
+      height: auto;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+       min-height: 100px;
+      margin-bottom: 1vw;
+    }
+}
+
+@media only screen and (max-width:420px) {
+  .Hero {
+      width: auto;
+      height: auto;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+       min-height: 50px;
+      margin-bottom: 1vw;
+    }
+}
+
+.TitleList {
+  padding: 10px 10px; 
+  box-sizing: border-box;
+  -webkit-transition: opacity 2s ease;
+  transition: opacity 2s ease;
+  opacity: 0;
+  position: relative;
+  z-index: 4; 
+}
+.TitleList .titles-wrapper {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: center;
+  margin: 10px; 
+  padding: 10px;
+  box-sizing: border-box; 
+  -webkit-box-pack: justify;
+}
+/* 
+.TitleList .titles-wrapper::-webkit-scrollbar {
+  display: none;
+} */
+
+.TitleList[data-loaded='true'] {
+  opacity: 1;
+}
+
+.Item {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+  color: white;
+  background-color: #000000;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden; 
+  margin: 10px;
+  -webkit-transition: all 0.50s ease;
+  transition: all 0.50s ease;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.Item .overlay {
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.8) 80%, transparent 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 80%, transparent 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+  /* IE6-9 */
+  padding: 20px;  
+  border: #161616;
+  position: relative;
+  height: auto;
+  max-width: 100%;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity .250s ease;
+  transition: opacity .250s ease;
+}
+.Item .overlay .title {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+}
+.Item .overlay .rating {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0;
+  -webkit-transition: opacity .25s ease .125s;
+  transition: opacity .25s ease .125s;
+}
+.Item .overlay .plot {
+  font-size: 15px;
+  display: -webkit-inline-box;
+  /* margin-top: 100px; */
+  font-weight: 300;
+  line-height: 1.6;
+  /* height: 50px; */
+  opacity: 0;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden !important;
+  text-overflow: ellipsis; 
+  /* white-space:nowrap; */
+  -webkit-transition: margin .25s ease .125s, opacity .25s ease .25s;
+  transition: margin .25s ease .125s, opacity .25s ease .25s;
+}
+.Item .overlay .details {
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0;
+  -webkit-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+}
+
+.Item:hover {
+  background-size: 100%;
+  opacity: 1;
+}
+/* .Item:hover ~ .Item{
+  opacity: 0.3; 
+  transform: translate3d(30px, 0, 0);
+} 
+/* .Item::before {
+  transform: translate3d(-30px, 0, 0); 
+} */
+/* .titles-wrapper:hover ~ .Item{
+  transform: translate3d(20px, 0, 0);
+}  */
+/* .titles-wrapper:hover{
+  transform: translate3d(-20px, 0, 0);
+} */
+.titles-wrapper:hover .Item:hover{
+  transform: scale(1.15);
+}
+.Item:hover .overlay {
+  opacity: 1;
+  pointer-events: all;
+}
+.Item:hover .overlay .plot {
+  margin-top: 10px;
+  /* text-overflow: ellipsis;
+  overflow: hidden; */
+  opacity: 1;
+}
+.Item:hover .overlay .title {
+  opacity: 1;
+}
+.Item:hover .overlay .rating {
+  opacity: 1;
+}
+.Item:hover .overlay .details {
+  opacity: 1;
+}

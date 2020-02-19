@@ -1,0 +1,217 @@
+.EpisodeList {
+    padding: 10px 10px; 
+    box-sizing: border-box;
+    -webkit-transition: opacity 2s ease;
+    transition: opacity 2s ease;
+    opacity: 0;
+    position: relative;
+    z-index: 4; 
+  }
+
+  .EpisodeList .episodes-wrapper {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    justify-items: center;
+    margin: 10px; 
+    padding: 10px;
+    box-sizing: border-box; 
+    -webkit-box-pack: justify;
+  }
+
+  .EpisodeList[data-loaded='true'] {
+    opacity: 1;
+  }
+
+  .epPoster {  
+    position: inherit;
+    display: grid;
+    width: 275px;
+    height: 400px;
+    background-color: #000000;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden; 
+    margin: 10px;
+    -webkit-transition: all 0.50s ease;
+    transition: all 0.50s ease;
+    grid-row-start:1;
+    grid-row-end: 7;
+    justify-self: center;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .episodeDetails{
+    position: relative;
+    display: grid;
+    margin: 10px;
+    column-gap: 20px;
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.4) 100%, transparent 100%);
+    -webkit-transition: margin .125s ease;
+    transition: margin .125s ease;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;   
+  }
+  
+  .Details{
+    position:inherit;
+    display: grid;
+    padding: 50px;
+    padding-top:10px;
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
+    -webkit-transition: margin .125s ease;
+    transition: margin .125s ease;
+  }
+
+  .Details-wrapper{
+    position: inherit;
+    display: grid;
+    grid-template-columns: auto auto ;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: 100%;
+  }
+
+    /* padding: 1.2rem; */
+  .episodeOrder{
+    position: inherit;
+    width: 100%;
+    height: 100%;
+    /* padding: 0.5rem; */
+    background-position: center;
+    background-size: 100%;
+  }
+  
+  .Card {
+    position: relative;
+    display: inline-block;
+    /* width: 300px; */
+    height: 150px;
+    background-size:cover;
+    background-color: #000000;
+    /* background-position: center; */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden; 
+  }
+
+ .epName {
+    margin: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: 300;
+  }
+
+  .epSynopsis, .epNo, .epTitle, .epDuration{
+    line-height: 1.2;
+    grid-column: 2;
+    padding: 0.4em;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .epDiscription{
+    line-height: 1;    
+    -webkit-transition: margin .125s ease;
+    transition: margin .125s ease;
+  }    
+
+ 
+  .epDirector, .epCast, .epGenre, .epSeason, .epYear, .epDiscription{
+    grid-column: 2;
+    padding-top: 20px;
+    padding-left: 10px;
+    justify-items: center;
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  .epTitle, .epSeason{
+    font-size: 25px;
+  }
+ 
+  @media only screen and (max-width: 643px) {
+    .Details {
+      padding: 30px;
+    }
+
+    .EpisodeList .episodes-wrapper {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-column-gap: 30px;
+      grid-row-gap: 20px;
+    }
+  
+    .epPoster{
+      width: 200px;
+      height: 300px;
+      margin: 10px;
+      grid-row-start:1;
+      grid-row-end: 7;
+    }
+
+    .epName {
+      font-size: 2em;
+      padding: 0px;
+    }
+
+    .epDirector, .epCast, .epGenre, .epSeason, .epYear, .epDiscription{
+      grid-column: 2;
+      font-size: 17px;
+    }
+
+    .Card {
+      height: 100px;
+    }
+
+    .epSynopsis, .epDuration {
+      font-size: 16px;
+    }
+
+    .epNo, .epTitle {
+      font-size: 20px;
+    }
+
+  }
+
+  @media only screen and (max-width: 485px) {
+    .EpisodeList, .episodes-wrapper {
+      padding-left: 60px;
+      padding-right: 60px; 
+    }
+
+    .epPoster{
+      width: 150px;
+      height: 225px;
+      margin: 10px;
+      grid-row-start:1;
+      grid-row-end: 2;
+    }
+
+    .epName {
+      font-size: 2em;
+      padding: 0px;
+    }
+
+    .epDirector, .epCast, .epGenre, .epSeason, .epYear, .epDiscription{
+      grid-column: 1;
+      font-size: 17px;
+    }
+
+    .Card{
+      height: 100px;
+    }
+  }
+
+  @media only screen and (max-width: 350px) {
+    .EpisodeList {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+  } 

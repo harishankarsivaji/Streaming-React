@@ -1,0 +1,40 @@
+{
+    "homedb":[
+        {
+            "title": "Movie",
+            "id": 1,
+            "head":"Watch",
+            "description":
+                "We guess you can finish a movie while we take care of your flight.",
+            "button": "/movies",
+            "image": "movie.jpg"
+        },
+        {
+            "title": "TV Show",
+            "id": 2,
+            "head":"Watch",
+            "description":
+                "Catch up with your favorite TV series while you are here",
+            "button": "/tvshows",
+            "image": "tv.jpg"
+        },
+        {
+            "title": "Movie",
+            "id": 3,
+            "head":"Watch",
+            "description":
+                "We guess you can finish a movie while we take care of your flight.",
+            "button": "/movies",
+            "image": "movie.jpg"
+        },
+        {
+            "title": "TV Show",
+            "id": 4,
+            "head":"Watch",
+            "description":
+                "Catch up with your favorite TV series while you are here",
+            "button": "/tvshows",
+            "image": "tv.jpg"
+        }
+    ]
+}

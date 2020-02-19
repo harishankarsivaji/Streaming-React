@@ -1,0 +1,163 @@
+#root {
+  /* height: 100%; */
+  width: 100%;
+  overflow: hidden;
+}
+
+.DivUnderRoot {
+  width: 101%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  font-family: serif;
+}
+
+.Header {
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, black 0%, transparent 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, black 0%, transparent 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+  /* IE6-9 */
+  display: grid;
+  grid-template-columns: auto auto;
+  position: inherit;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 5;
+}
+
+.Logo {
+  width: auto;
+  min-width: 150px;
+  max-width: 350px;
+  height: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+  margin-right: 0px;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: margin .125s ease;
+  transition: margin .125s ease;
+  /* float: left; */
+  vertical-align: middle;
+}
+
+.Logo:hover {
+  cursor: pointer;
+}
+
+.Navigation {
+  margin: auto;
+  margin-right: 30px;
+  float: right;
+  vertical-align: middle;
+}
+
+.Navigation ul {
+  display: inline;
+}
+
+.Navigation ul li {
+  display: inline;
+  font-weight: 500;
+  padding: 7px 30px;
+  font-size: 23px;
+  -webkit-transition: background .125s ease;
+  transition: background .125s ease;
+  border-radius: 3px;
+  text-decoration: 'none';
+}
+
+.changeit.active,
+.changeit {
+  color: #ffffff;
+  text-decoration: none;
+
+}
+
+a:hover {
+  text-decoration: none;
+  font-size: 101%;
+
+}
+
+.changeit:hover {
+  color: #ffd11a;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .Header {
+    grid-template-columns: auto auto;
+    grid-template-rows: 2;
+  }
+
+  .Hero {
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    max-height: 200px;
+  }
+
+}
+
+@media only screen and (max-width: 950px) {
+  .Navigation ul li {
+    display: grid;
+
+  }
+
+  .Navigation {
+    float: right;
+    grid-column: 2 / span 1;
+    grid-row: 1/ span 2;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+  .Header {
+    grid-template-columns: auto;
+    grid-template-rows: 3;
+  }
+
+  .Logo {
+    grid-column: 1 / span 1;
+    grid-row: 1;
+    margin-left: auto;  
+    margin-right: auto;
+  }
+
+  .Navigation ul li {
+    display: grid;
+  }
+
+  .Navigation {
+    float: left;
+    margin: auto;
+    grid-column: 1 / span 1;
+    grid-row: 2;
+  }
+
+  .Hero {
+    width: 100%;
+    position: relative;
+    background-size: cover;
+    min-height: 300px;
+  }
+}
+
+@media only screen and (max-width:450px) {
+  .Logo {
+    width: auto;
+    max-height: 100%;
+  }
+}
