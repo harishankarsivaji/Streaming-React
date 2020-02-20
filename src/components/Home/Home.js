@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import '../css/Home.css';
+import './Home.css';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import 'normalize.css/normalize.css';
-import '../css/slider-animations.css';
+import './slider-animations.css';
 import { NavLink } from "react-router-dom";
 import { Logo } from './header.js';
 
