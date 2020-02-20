@@ -22,7 +22,7 @@ export class Logo extends Component{
 		return (
 		<NavLink to="/">
 		  <div id="logo" className="Logo"
-		    style={{backgroundImage: 'url(logo_atlas-air_main_v2.png)'}}> 
+		    style={{backgroundImage: 'url(logo.svg)'}}> 
 		  </div>
 		</NavLink>
 		);
